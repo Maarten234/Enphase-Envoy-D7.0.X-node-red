@@ -24,3 +24,5 @@ The flow has been divided in 3 blocks.
 
 
 If you see a message in your debug window stating: "json parse error" don't worry, this indicates that the sessionId used in block 1. is invalid. The flow will automatically go to block 2. to obtain a new sessionId or if needed a new token from enphaseenergy.com using block 3.
+# Dependencies
+* **node-red-contrib-time-switch:**<br>Node 'time-switch' (in this flow named sunrise - sunset) is not essential as it only limits read activities to the period between sunrise and sunset. If you don't have the pallet [node-red-contrib-time-switch](https://flows.nodered.org/node/node-red-contrib-time-switch) installed you can also decide to leave this node out/bypass.

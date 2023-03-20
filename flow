@@ -1,0 +1,892 @@
+[
+    {
+        "id": "2fd8a6172e540232",
+        "type": "group",
+        "z": "2c034f53bebacdc3",
+        "name": "Login to Envoy with token to obtain sessionId",
+        "style": {
+            "fill": "#ffdf7f",
+            "label": true
+        },
+        "nodes": [
+            "a0fe2400eeb4da41",
+            "d0708a87074bed28",
+            "47810f553d05c673",
+            "0e00e839fbb83112"
+        ],
+        "x": 34,
+        "y": 339,
+        "w": 852,
+        "h": 82
+    },
+    {
+        "id": "d91ec3f9ef9ddfe5",
+        "type": "group",
+        "z": "2c034f53bebacdc3",
+        "name": "Read Envoy using sessionId",
+        "style": {
+            "fill": "#c8e7a7",
+            "label": true
+        },
+        "nodes": [
+            "e0478f3a4d0f4032",
+            "095ab65494c5d16e",
+            "d349b80d4879b132",
+            "5b190e7428ebc184",
+            "63240ef608e6eb52",
+            "630edd68e798e5a6",
+            "5fde57212a06be6a",
+            "d4b739558662ebf4",
+            "2e3303085661a5c5",
+            "befd189f76f409d8",
+            "c484b03a1e7a6503",
+            "a270875faac582c7",
+            "97c7f5f4cbb6d860"
+        ],
+        "x": 34,
+        "y": 59,
+        "w": 2032,
+        "h": 202
+    },
+    {
+        "id": "f1e165a64063194d",
+        "type": "group",
+        "z": "2c034f53bebacdc3",
+        "name": "Obtain token from Enphase",
+        "style": {
+            "fill": "#ffbfbf",
+            "label": true
+        },
+        "nodes": [
+            "6f70138720deffab",
+            "a55d1a89aa620bf5",
+            "6c7935ea8c7c423f",
+            "e708522a541c5e45",
+            "b2180be487beb9ee",
+            "4ef08743f4f189b1",
+            "c8f489b39cc71df8",
+            "b869eea4bbf8ee80",
+            "5370b06948799521",
+            "1db42e338f7f9bfc",
+            "d75f803306cc0c44",
+            "1fb052854fb2f77f"
+        ],
+        "x": 34,
+        "y": 553,
+        "w": 2752,
+        "h": 134
+    },
+    {
+        "id": "5370b06948799521",
+        "type": "group",
+        "z": "2c034f53bebacdc3",
+        "g": "f1e165a64063194d",
+        "name": "",
+        "style": {
+            "fill": "#ffff00",
+            "label": true
+        },
+        "nodes": [
+            "5858b55198c00bd2"
+        ],
+        "x": 834,
+        "y": 579,
+        "w": 232,
+        "h": 82
+    },
+    {
+        "id": "56a323a43fc0b380",
+        "type": "comment",
+        "z": "2c034f53bebacdc3",
+        "name": "Connection to envoy failed. Request new sessionId",
+        "info": "",
+        "x": 330,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "41131edb888278a9",
+        "type": "comment",
+        "z": "2c034f53bebacdc3",
+        "name": "Feed the received sessionId back",
+        "info": "",
+        "x": 770,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "8ddac522ae3d5c51",
+        "type": "comment",
+        "z": "2c034f53bebacdc3",
+        "name": "Login to Envoy using token failed. Request new token from Enphase",
+        "info": "",
+        "x": 320,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "99adca6765f184db",
+        "type": "comment",
+        "z": "2c034f53bebacdc3",
+        "name": "Feed the received token back",
+        "info": "",
+        "x": 1060,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "a0fe2400eeb4da41",
+        "type": "function",
+        "z": "2c034f53bebacdc3",
+        "g": "2fd8a6172e540232",
+        "name": "set http headers",
+        "func": "token = msg.token||flow.get('Enphase_local_token');\nmsg.headers={\n    \"Accept\": \"application/json\",\n    \"content-type\": \"application/x-www-form-urlencoded\",\n    \"Cache-Control\": \"no-cache\",\n    \"Authorization\": \"Bearer \" + token\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 140,
+        "y": 380,
+        "wires": [
+            [
+                "d0708a87074bed28"
+            ]
+        ]
+    },
+    {
+        "id": "d0708a87074bed28",
+        "type": "http request",
+        "z": "2c034f53bebacdc3",
+        "g": "2fd8a6172e540232",
+        "name": "auth/check_jwt",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://<ip-address envoy>/auth/check_jwt",
+        "tls": "e03cfa5b63566525",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "credentials": {},
+        "x": 340,
+        "y": 380,
+        "wires": [
+            [
+                "47810f553d05c673"
+            ]
+        ],
+        "info": "Envoy returns a sessionId when the Bearer token is accepted. The sessionId can be used to make API calls"
+    },
+    {
+        "id": "47810f553d05c673",
+        "type": "switch",
+        "z": "2c034f53bebacdc3",
+        "g": "2fd8a6172e540232",
+        "name": "HTTP status code=200",
+        "property": "statusCode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "200",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 550,
+        "y": 380,
+        "wires": [
+            [
+                "0e00e839fbb83112"
+            ],
+            [
+                "1fb052854fb2f77f"
+            ]
+        ],
+        "outputLabels": [
+            "sessionID obtained",
+            "error"
+        ],
+        "info": "When the envoy accepted the token it returns HTTP status code 200"
+    },
+    {
+        "id": "0e00e839fbb83112",
+        "type": "function",
+        "z": "2c034f53bebacdc3",
+        "g": "2fd8a6172e540232",
+        "name": "save sessionId",
+        "func": "// Save sessionId\nflow.set('sessionId',msg.responseCookies.sessionId.value);\n\n// Set node status to show date time last called into action\nlet d=new Date();\nnode.status({text:d.toISOString().split('T')[0]+\" \"+d.toTimeString().split(\" \")[0]});\n\n// continu flow\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 380,
+        "wires": [
+            [
+                "e0478f3a4d0f4032"
+            ]
+        ]
+    },
+    {
+        "id": "e0478f3a4d0f4032",
+        "type": "function",
+        "z": "2c034f53bebacdc3",
+        "g": "d91ec3f9ef9ddfe5",
+        "name": "set parameters HTTP request",
+        "func": "msg.headers={\n    Accept: \"application/json\",\n    \"content-type\": \"application/x-www-form-urlencoded\",\n    \"Cache-Control\": 'no-cache'\n};\nmsg.cookies={\"sessionId\": flow.get('sessionId')||0};\n\n// rejectUnauthorized:\n// If set to false, allows requests to be made to https sites that use self signed certificates.\n// An alternative is to set the following in the HTTP request node as is done in the \"auth/check_jwt\" HTTP request node:\n// Check \"Enable secure (SSL/TLS) connection\" and create an TLS configuration node with all checkboxes unchecked\nmsg.rejectUnauthorized=false; \n \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 100,
+        "wires": [
+            [
+                "095ab65494c5d16e"
+            ]
+        ]
+    },
+    {
+        "id": "095ab65494c5d16e",
+        "type": "http request",
+        "z": "2c034f53bebacdc3",
+        "g": "d91ec3f9ef9ddfe5",
+        "name": "api/v1/production/inverters",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://<ip-address envoy>/api/v1/production/inverters",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 880,
+        "y": 100,
+        "wires": [
+            [
+                "63240ef608e6eb52"
+            ]
+        ]
+    },
+    {
+        "id": "d349b80d4879b132",
+        "type": "http request",
+        "z": "2c034f53bebacdc3",
+        "g": "d91ec3f9ef9ddfe5",
+        "name": "production.json",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://<ip-address envoy>/production.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1400,
+        "y": 160,
+        "wires": [
+            [
+                "d4b739558662ebf4",
+                "630edd68e798e5a6"
+            ]
+        ]
+    },
+    {
+        "id": "5b190e7428ebc184",
+        "type": "inject",
+        "z": "2c034f53bebacdc3",
+        "g": "d91ec3f9ef9ddfe5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 100,
+        "wires": [
+            [
+                "befd189f76f409d8"
+            ]
+        ]
+    },
+    {
+        "id": "63240ef608e6eb52",
+        "type": "switch",
+        "z": "2c034f53bebacdc3",
+        "g": "d91ec3f9ef9ddfe5",
+        "name": "HTTP status code=200",
+        "property": "statusCode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "200",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1150,
+        "y": 100,
+        "wires": [
+            [
+                "d349b80d4879b132",
+                "5fde57212a06be6a"
+            ],
+            [
+                "a0fe2400eeb4da41"
+            ]
+        ],
+        "outputLabels": [
+            "succes",
+            "error"
+        ],
+        "info": "When the envoy accepted the token it returns HTTP status code 200"
+    },
+    {
+        "id": "630edd68e798e5a6",
+        "type": "rbe",
+        "z": "2c034f53bebacdc3",
+        "g": "d91ec3f9ef9ddfe5",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1590,
+        "y": 160,
+        "wires": [
+            [
+                "c484b03a1e7a6503"
+            ]
+        ]
+    },
+    {
+        "id": "5fde57212a06be6a",
+        "type": "rbe",
+        "z": "2c034f53bebacdc3",
+        "g": "d91ec3f9ef9ddfe5",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1370,
+        "y": 100,
+        "wires": [
+            [
+                "2e3303085661a5c5"
+            ]
+        ]
+    },
+    {
+        "id": "d4b739558662ebf4",
+        "type": "http request",
+        "z": "2c034f53bebacdc3",
+        "g": "d91ec3f9ef9ddfe5",
+        "name": "api/v1/production",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://<ip-address envoy>/api/v1/production",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1630,
+        "y": 220,
+        "wires": [
+            [
+                "97c7f5f4cbb6d860"
+            ]
+        ]
+    },
+    {
+        "id": "2e3303085661a5c5",
+        "type": "debug",
+        "z": "2c034f53bebacdc3",
+        "g": "d91ec3f9ef9ddfe5",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1960,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "befd189f76f409d8",
+        "type": "time-switch",
+        "z": "2c034f53bebacdc3",
+        "g": "d91ec3f9ef9ddfe5",
+        "name": "",
+        "lat": "40.71398",
+        "lon": "-32.87107",
+        "startTime": "sunrise",
+        "endTime": "sunset",
+        "startOffset": "",
+        "endOffset": "",
+        "x": 320,
+        "y": 100,
+        "wires": [
+            [
+                "e0478f3a4d0f4032"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "c484b03a1e7a6503",
+        "type": "debug",
+        "z": "2c034f53bebacdc3",
+        "g": "d91ec3f9ef9ddfe5",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1960,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "a270875faac582c7",
+        "type": "debug",
+        "z": "2c034f53bebacdc3",
+        "g": "d91ec3f9ef9ddfe5",
+        "name": "debug 3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1960,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "6f70138720deffab",
+        "type": "http request",
+        "z": "2c034f53bebacdc3",
+        "g": "f1e165a64063194d",
+        "name": "info.xml",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "<ip-address envoy>/info.xml",
+        "tls": "e03cfa5b63566525",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "credentials": {},
+        "x": 400,
+        "y": 620,
+        "wires": [
+            [
+                "a55d1a89aa620bf5"
+            ]
+        ]
+    },
+    {
+        "id": "a55d1a89aa620bf5",
+        "type": "xml",
+        "z": "2c034f53bebacdc3",
+        "g": "f1e165a64063194d",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 530,
+        "y": 620,
+        "wires": [
+            [
+                "6c7935ea8c7c423f"
+            ]
+        ]
+    },
+    {
+        "id": "6c7935ea8c7c423f",
+        "type": "switch",
+        "z": "2c034f53bebacdc3",
+        "g": "f1e165a64063194d",
+        "name": "HTTP status code=200",
+        "property": "statusCode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "200",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 710,
+        "y": 620,
+        "wires": [
+            [
+                "5858b55198c00bd2"
+            ],
+            []
+        ],
+        "outputLabels": [
+            "success",
+            "error"
+        ],
+        "info": "When the envoy accepted the token it returns HTTP status code 200"
+    },
+    {
+        "id": "e708522a541c5e45",
+        "type": "function",
+        "z": "2c034f53bebacdc3",
+        "g": "f1e165a64063194d",
+        "name": "set msg.serialnumber",
+        "func": "msg.serialnumber=msg.payload.envoy_info.device[0].sn[0];\nmsg.headers={\n    \"Accept\": \"application/json\",\n    \"content-type\": \"application/x-www-form-urlencoded\",\n    \"Cache-Control\": \"no-cache\"\n};\nmsg.payload={\n    \"user[email]\": msg.username,\n    \"user[password]\": msg.password\n}\n\n//remove property password\ndelete msg.password;\n\n// Set node status to show date time last called into action\nlet d=new Date();\nnode.status({text:d.toISOString().split('T')[0]+\" \"+d.toTimeString().split(\" \")[0]});\n\n//Continu flow\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 620,
+        "wires": [
+            [
+                "b2180be487beb9ee"
+            ]
+        ]
+    },
+    {
+        "id": "b2180be487beb9ee",
+        "type": "http request",
+        "z": "2c034f53bebacdc3",
+        "g": "f1e165a64063194d",
+        "name": "enlighten.enphaseenergy.com/login/login.json",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://enlighten.enphaseenergy.com/login/login.json",
+        "tls": "e03cfa5b63566525",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1480,
+        "y": 620,
+        "wires": [
+            [
+                "1db42e338f7f9bfc"
+            ]
+        ]
+    },
+    {
+        "id": "4ef08743f4f189b1",
+        "type": "function",
+        "z": "2c034f53bebacdc3",
+        "g": "f1e165a64063194d",
+        "name": "set payload",
+        "func": "msg.payload={\n    session_id: msg.payload.session_id,\n    serial_num: msg.serialnumber,\n    username: msg.username\n}\ndelete msg.username;\n\n// Set node status to show date time last called into action\nlet d=new Date();\nnode.status({text:d.toISOString().split('T')[0]+\" \"+d.toTimeString().split(\" \")[0]});\n\n//continu flow\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1990,
+        "y": 620,
+        "wires": [
+            [
+                "c8f489b39cc71df8"
+            ]
+        ]
+    },
+    {
+        "id": "c8f489b39cc71df8",
+        "type": "http request",
+        "z": "2c034f53bebacdc3",
+        "g": "f1e165a64063194d",
+        "name": "entrez.enphaseenergy.com/tokens",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://entrez.enphaseenergy.com/tokens",
+        "tls": "e03cfa5b63566525",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 2220,
+        "y": 620,
+        "wires": [
+            [
+                "d75f803306cc0c44"
+            ]
+        ]
+    },
+    {
+        "id": "b869eea4bbf8ee80",
+        "type": "function",
+        "z": "2c034f53bebacdc3",
+        "g": "f1e165a64063194d",
+        "name": "Save token",
+        "func": "flow.set('Enphase_local_token',msg.payload);\nmsg.token=msg.payload;\n    \n// Set node status to show date time last called into action\nlet d=new Date();\nnode.status({text:d.toISOString().split('T')[0]+\" \"+d.toTimeString().split(\" \")[0]});\n\n//Continu flow\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2690,
+        "y": 620,
+        "wires": [
+            [
+                "a0fe2400eeb4da41"
+            ]
+        ]
+    },
+    {
+        "id": "5858b55198c00bd2",
+        "type": "change",
+        "z": "2c034f53bebacdc3",
+        "g": "5370b06948799521",
+        "name": "Login credentials",
+        "rules": [
+            {
+                "t": "set",
+                "p": "username",
+                "pt": "msg",
+                "to": "<username>",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "password",
+                "pt": "msg",
+                "to": "<password>",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 950,
+        "y": 620,
+        "wires": [
+            [
+                "e708522a541c5e45"
+            ]
+        ]
+    },
+    {
+        "id": "1db42e338f7f9bfc",
+        "type": "switch",
+        "z": "2c034f53bebacdc3",
+        "g": "f1e165a64063194d",
+        "name": "HTTP status code=200",
+        "property": "statusCode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "200",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1790,
+        "y": 620,
+        "wires": [
+            [
+                "4ef08743f4f189b1"
+            ],
+            []
+        ],
+        "outputLabels": [
+            "success",
+            "error"
+        ],
+        "info": "When the envoy accepted the token it returns HTTP status code 200"
+    },
+    {
+        "id": "d75f803306cc0c44",
+        "type": "switch",
+        "z": "2c034f53bebacdc3",
+        "g": "f1e165a64063194d",
+        "name": "HTTP status code=200",
+        "property": "statusCode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "200",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 2490,
+        "y": 620,
+        "wires": [
+            [
+                "b869eea4bbf8ee80"
+            ],
+            []
+        ],
+        "outputLabels": [
+            "success",
+            "error"
+        ],
+        "info": "When the envoy accepted the token it returns HTTP status code 200"
+    },
+    {
+        "id": "1fb052854fb2f77f",
+        "type": "function",
+        "z": "2c034f53bebacdc3",
+        "g": "f1e165a64063194d",
+        "name": "Limit request rate to once a day",
+        "func": "var interval = (1000*60*60*24); // minimum interval between messages (ms)\nvar lastReleased = context.get('LastTime') || 0;\nvar now = Date.now();\n\nif (now-lastReleased > interval) {\n  context.set('LastTime',now);\n  return msg;\n} else {\n  return null;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 190,
+        "y": 620,
+        "wires": [
+            [
+                "6f70138720deffab"
+            ]
+        ],
+        "info": "https://flows.nodered.org/flow/9410e4cebcc4b68fae73"
+    },
+    {
+        "id": "97c7f5f4cbb6d860",
+        "type": "rbe",
+        "z": "2c034f53bebacdc3",
+        "g": "d91ec3f9ef9ddfe5",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1790,
+        "y": 220,
+        "wires": [
+            [
+                "a270875faac582c7"
+            ]
+        ]
+    },
+    {
+        "id": "e6027a3ff14620c1",
+        "type": "comment",
+        "z": "2c034f53bebacdc3",
+        "name": "Source 1",
+        "info": "https://github.com/H4nsie/EnphaseEnvoy/blob/main/plugin.py",
+        "x": 100,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "14f187cf4065078c",
+        "type": "comment",
+        "z": "2c034f53bebacdc3",
+        "name": "Source 2",
+        "info": "https://support.enphase.com/s/question/0D53m00008ketz6CAA/i-have-a-new-enphase-system-and-reading-my-envoy-using-the-local-api-this-goes-well-for-one-endpoint-but-not-for-another?t=1678709630042\n\nBased on post:\nKneib_3226\nEdited February 24, 2023 at 10:35 AM",
+        "x": 240,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "e03cfa5b63566525",
+        "type": "tls-config",
+        "z": "2c034f53bebacdc3",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": false,
+        "alpnprotocol": ""
+    }
+]

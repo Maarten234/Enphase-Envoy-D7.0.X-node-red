@@ -1,5 +1,5 @@
-# Enphase-Envoy-D7.0.X-node-red
-Since firmware D7.0.X it is only possible to gain local access to the Enphase envoy IQ gateway once you've obtained a token via:
+# Enphase Envoy D7.0.X node-red
+Since firmware D7.0.X it is only possible to gain local access to the Enphase envoy IQ gateway once you've obtained a token from Enphase.
 
 This flow is following the approach documented by H4nsie (https://github.com/H4nsie/EnphaseEnvoy/blob/main/plugin.py)
 

@@ -8,6 +8,8 @@ To use this flow you've to adjust the following 3 nodes:
 - Envoy address: _ip address of your Enphase envoy iq gateway_
 - sunrise sunset: _provide the coordinates of your solar system such that it will only contact your envoy iq gateway between sunrise and sunset or delete this node_ (The current coordinates refer to a random location in the Atlantic ocean)
 
+# Flow
+![flow](./images/flow%20enphase%20envoy.png)
 # How does it work
 The flow has been divided in 3 blocks.
 1. **Read envoy using sessionId**<br>Every minute it starts the flow to request information from the envoy gateway. Only when the response has changed to the previous call it will send the retrieved information to a debug node. To contact the envoy a sessionId is needed. When the sessionId is invalid the hppt request response code does not equal 200 and a new sessionId will be requested using block 2.

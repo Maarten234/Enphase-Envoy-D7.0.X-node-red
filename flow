@@ -318,7 +318,7 @@
         "props": [
             {
                 "p": "envoyaddress",
-                "v": "<ip-address envoy gateway",
+                "v": "<ip-address envoy gateway>",
                 "vt": "str"
             }
         ],

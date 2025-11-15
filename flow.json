@@ -1,191 +1,85 @@
 [
     {
-        "id": "2fd8a6172e540232",
+        "id": "351f3381df38c0f3",
         "type": "group",
-        "z": "2c034f53bebacdc3",
+        "z": "905c94febbc42e67",
+        "name": "Read envoy ",
+        "style": {
+            "label": true,
+            "fill": "#bfdbef"
+        },
+        "nodes": [
+            "813e886ac1b700f7",
+            "2fd4172d0b60e371",
+            "57516bafab82057b",
+            "06b3b408436960c9",
+            "a3c4125c716e9790",
+            "7c8b8c70988ddeb8"
+        ],
+        "x": 48,
+        "y": -47,
+        "w": 3024,
+        "h": 914
+    },
+    {
+        "id": "813e886ac1b700f7",
+        "type": "comment",
+        "z": "905c94febbc42e67",
+        "g": "351f3381df38c0f3",
+        "name": "Connection to envoy failed. Request new sessionId",
+        "info": "",
+        "x": 370,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "2fd4172d0b60e371",
+        "type": "comment",
+        "z": "905c94febbc42e67",
+        "g": "351f3381df38c0f3",
+        "name": "Feed the received token back",
+        "info": "",
+        "x": 1100,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "57516bafab82057b",
+        "type": "comment",
+        "z": "905c94febbc42e67",
+        "g": "351f3381df38c0f3",
+        "name": "Feed the received sessionId back",
+        "info": "",
+        "x": 810,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "06b3b408436960c9",
+        "type": "group",
+        "z": "905c94febbc42e67",
+        "g": "351f3381df38c0f3",
         "name": "Login to Envoy with token to obtain sessionId",
         "style": {
             "fill": "#ffdf7f",
             "label": true
         },
         "nodes": [
-            "a0fe2400eeb4da41",
-            "d0708a87074bed28",
-            "47810f553d05c673",
-            "0e00e839fbb83112"
+            "2479611c2a0f3150",
+            "f804c9c99201b2a3",
+            "39dc35c82726a8e0",
+            "fd80c391e7f54c68"
         ],
-        "x": 34,
-        "y": 339,
+        "x": 74,
+        "y": 419,
         "w": 852,
         "h": 82
     },
     {
-        "id": "d91ec3f9ef9ddfe5",
-        "type": "group",
-        "z": "2c034f53bebacdc3",
-        "name": "Read Envoy using sessionId",
-        "style": {
-            "fill": "#c8e7a7",
-            "label": true
-        },
-        "nodes": [
-            "e0478f3a4d0f4032",
-            "095ab65494c5d16e",
-            "d349b80d4879b132",
-            "5b190e7428ebc184",
-            "63240ef608e6eb52",
-            "630edd68e798e5a6",
-            "5fde57212a06be6a",
-            "d4b739558662ebf4",
-            "2e3303085661a5c5",
-            "befd189f76f409d8",
-            "c484b03a1e7a6503",
-            "a270875faac582c7",
-            "97c7f5f4cbb6d860"
-        ],
-        "x": 34,
-        "y": 59,
-        "w": 2032,
-        "h": 202
-    },
-    {
-        "id": "f1e165a64063194d",
-        "type": "group",
-        "z": "2c034f53bebacdc3",
-        "name": "Obtain token from Enphase",
-        "style": {
-            "fill": "#ffbfbf",
-            "label": true
-        },
-        "nodes": [
-            "6f70138720deffab",
-            "a55d1a89aa620bf5",
-            "6c7935ea8c7c423f",
-            "e708522a541c5e45",
-            "b2180be487beb9ee",
-            "4ef08743f4f189b1",
-            "c8f489b39cc71df8",
-            "b869eea4bbf8ee80",
-            "5370b06948799521",
-            "1db42e338f7f9bfc",
-            "d75f803306cc0c44",
-            "1fb052854fb2f77f"
-        ],
-        "x": 34,
-        "y": 553,
-        "w": 2752,
-        "h": 134
-    },
-    {
-        "id": "5370b06948799521",
-        "type": "group",
-        "z": "2c034f53bebacdc3",
-        "g": "f1e165a64063194d",
-        "name": "",
-        "style": {
-            "fill": "#ffff00",
-            "label": true
-        },
-        "nodes": [
-            "5858b55198c00bd2"
-        ],
-        "x": 834,
-        "y": 579,
-        "w": 232,
-        "h": 82
-    },
-    {
-        "id": "56a323a43fc0b380",
-        "type": "comment",
-        "z": "2c034f53bebacdc3",
-        "name": "Connection to envoy failed. Request new sessionId",
-        "info": "",
-        "x": 330,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "41131edb888278a9",
-        "type": "comment",
-        "z": "2c034f53bebacdc3",
-        "name": "Feed the received sessionId back",
-        "info": "",
-        "x": 770,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "8ddac522ae3d5c51",
-        "type": "comment",
-        "z": "2c034f53bebacdc3",
-        "name": "Login to Envoy using token failed. Request new token from Enphase",
-        "info": "",
-        "x": 320,
-        "y": 500,
-        "wires": []
-    },
-    {
-        "id": "99adca6765f184db",
-        "type": "comment",
-        "z": "2c034f53bebacdc3",
-        "name": "Feed the received token back",
-        "info": "",
-        "x": 1060,
-        "y": 480,
-        "wires": []
-    },
-    {
-        "id": "a0fe2400eeb4da41",
-        "type": "function",
-        "z": "2c034f53bebacdc3",
-        "g": "2fd8a6172e540232",
-        "name": "set http headers",
-        "func": "token = msg.token||flow.get('Enphase_local_token');\nmsg.headers={\n    \"Accept\": \"application/json\",\n    \"content-type\": \"application/x-www-form-urlencoded\",\n    \"Cache-Control\": \"no-cache\",\n    \"Authorization\": \"Bearer \" + token\n};\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 140,
-        "y": 380,
-        "wires": [
-            [
-                "d0708a87074bed28"
-            ]
-        ]
-    },
-    {
-        "id": "d0708a87074bed28",
-        "type": "http request",
-        "z": "2c034f53bebacdc3",
-        "g": "2fd8a6172e540232",
-        "name": "auth/check_jwt",
-        "method": "GET",
-        "ret": "txt",
-        "paytoqs": "ignore",
-        "url": "https://{{{envoyaddress}}}/auth/check_jwt",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "credentials": {},
-        "x": 340,
-        "y": 380,
-        "wires": [
-            [
-                "47810f553d05c673"
-            ]
-        ],
-        "info": "Envoy returns a sessionId when the Bearer token is accepted. The sessionId can be used to make API calls"
-    },
-    {
-        "id": "47810f553d05c673",
+        "id": "2479611c2a0f3150",
         "type": "switch",
-        "z": "2c034f53bebacdc3",
-        "g": "2fd8a6172e540232",
+        "z": "905c94febbc42e67",
+        "g": "06b3b408436960c9",
         "name": "HTTP status code=200",
         "property": "statusCode",
         "propertyType": "msg",
@@ -202,14 +96,14 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 550,
-        "y": 380,
+        "x": 590,
+        "y": 460,
         "wires": [
             [
-                "0e00e839fbb83112"
+                "f804c9c99201b2a3"
             ],
             [
-                "1fb052854fb2f77f"
+                "07587899caea0de0"
             ]
         ],
         "outputLabels": [
@@ -219,75 +113,163 @@
         "info": "When the envoy accepted the token it returns HTTP status code 200"
     },
     {
-        "id": "0e00e839fbb83112",
-        "type": "function",
-        "z": "2c034f53bebacdc3",
-        "g": "2fd8a6172e540232",
-        "name": "save sessionId",
-        "func": "// Save sessionId\nflow.set('sessionId',msg.responseCookies.sessionId.value);\n\n// Set node status to show date time last called into action\nlet d=new Date();\nnode.status({text:d.toISOString().split('T')[0]+\" \"+d.toTimeString().split(\" \")[0]});\n\n// continu flow\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 780,
-        "y": 380,
+        "id": "f804c9c99201b2a3",
+        "type": "change",
+        "z": "905c94febbc42e67",
+        "g": "06b3b408436960c9",
+        "name": "save sessionID",
+        "rules": [
+            {
+                "t": "set",
+                "p": "sessionId",
+                "pt": "flow",
+                "to": "responseCookies.sessionId.value",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 820,
+        "y": 460,
         "wires": [
             [
-                "e0478f3a4d0f4032"
+                "f37df996be12fd81"
             ]
         ]
     },
     {
-        "id": "e0478f3a4d0f4032",
-        "type": "function",
-        "z": "2c034f53bebacdc3",
-        "g": "d91ec3f9ef9ddfe5",
-        "name": "set parameters HTTP request",
-        "func": "msg.headers={\n    Accept: \"application/json\",\n    \"content-type\": \"application/x-www-form-urlencoded\",\n    \"Cache-Control\": 'no-cache'\n};\nmsg.cookies={\"sessionId\": flow.get('sessionId')||0};\n\n// rejectUnauthorized:\n// If set to false, allows requests to be made to https sites that use self signed certificates.\n// An alternative is to set the following in the HTTP request node as is done in the \"auth/check_jwt\" HTTP request node:\n// Check \"Enable secure (SSL/TLS) connection\" and create an TLS configuration node with all checkboxes unchecked\nmsg.rejectUnauthorized=false; \n \nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 590,
-        "y": 100,
-        "wires": [
-            [
-                "095ab65494c5d16e"
-            ]
-        ]
-    },
-    {
-        "id": "095ab65494c5d16e",
+        "id": "39dc35c82726a8e0",
         "type": "http request",
-        "z": "2c034f53bebacdc3",
-        "g": "d91ec3f9ef9ddfe5",
-        "name": "api/v1/production/inverters",
+        "z": "905c94febbc42e67",
+        "g": "06b3b408436960c9",
+        "name": "auth/check_jwt",
         "method": "GET",
-        "ret": "obj",
+        "ret": "txt",
         "paytoqs": "ignore",
-        "url": "https://{{{envoyaddress}}}/api/v1/production/inverters",
-        "tls": "",
+        "url": "https://{{{envoyaddress}}}/auth/check_jwt",
+        "tls": "f03098b9a0460f11",
         "persist": false,
         "proxy": "",
         "insecureHTTPParser": false,
         "authType": "",
         "senderr": false,
-        "headers": [],
-        "x": 880,
-        "y": 100,
+        "headers": [
+            {
+                "keyType": "Accept",
+                "keyValue": "",
+                "valueType": "application/json",
+                "valueValue": ""
+            },
+            {
+                "keyType": "Content-Type",
+                "keyValue": "",
+                "valueType": "other",
+                "valueValue": "application/x-www-form-urlencoded"
+            },
+            {
+                "keyType": "Cache-Control",
+                "keyValue": "",
+                "valueType": "no-cache",
+                "valueValue": ""
+            },
+            {
+                "keyType": "Authorization",
+                "keyValue": "",
+                "valueType": "msg",
+                "valueValue": "authorization"
+            }
+        ],
+        "x": 380,
+        "y": 460,
         "wires": [
             [
-                "63240ef608e6eb52"
+                "2479611c2a0f3150"
+            ]
+        ],
+        "info": "Envoy returns a sessionId when the Bearer token is accepted. The sessionId can be used to make API calls"
+    },
+    {
+        "id": "fd80c391e7f54c68",
+        "type": "function",
+        "z": "905c94febbc42e67",
+        "g": "06b3b408436960c9",
+        "name": "set authorization",
+        "func": "msg.authorization = \"Bearer \" + (msg.token||flow.get('Enphase_local_token'));\n\n// Set node status to show date time last called into action\nlet d=new Date();\nnode.status({text:d.toISOString().split('T')[0]+\" \"+d.toTimeString().split(\" \")[0]});\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 190,
+        "y": 460,
+        "wires": [
+            [
+                "39dc35c82726a8e0"
             ]
         ]
     },
     {
-        "id": "d349b80d4879b132",
+        "id": "f03098b9a0460f11",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": false,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "a3c4125c716e9790",
+        "type": "group",
+        "z": "905c94febbc42e67",
+        "g": "351f3381df38c0f3",
+        "name": "Read Envoy using sessionId",
+        "style": {
+            "fill": "#c8e7a7",
+            "label": true
+        },
+        "nodes": [
+            "1fcda1179af1491f",
+            "f0df4fdaba802dc8",
+            "7b870980f8b7c8dc",
+            "d37d7b9c4fd85807",
+            "af2e091e3afe2a62",
+            "5989ae16fc634c1a",
+            "cae0cfc8f7ddd307",
+            "1cdae3f8ed4ca9aa",
+            "922dce4ef02240e0",
+            "c8bfe7163b551225",
+            "5a872cdec8eb0607",
+            "cafe254503f4f0be",
+            "a0b6773bcabe207e",
+            "407ca72d01d6daed",
+            "f37df996be12fd81",
+            "73abf76df46db5f0",
+            "44a8f04441ec859e",
+            "ecf4fd1c520bb3ad",
+            "199bd00a18a19a08",
+            "9bef999ca6abb23e",
+            "d55e19078ed82bb4",
+            "fd9d0b5a2b3402a4"
+        ],
+        "x": 74,
+        "y": -21,
+        "w": 2092,
+        "h": 362
+    },
+    {
+        "id": "1fcda1179af1491f",
         "type": "http request",
-        "z": "2c034f53bebacdc3",
-        "g": "d91ec3f9ef9ddfe5",
+        "z": "905c94febbc42e67",
+        "g": "a3c4125c716e9790",
         "name": "production.json",
         "method": "GET",
         "ret": "obj",
@@ -300,25 +282,25 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 1400,
-        "y": 160,
+        "x": 1520,
+        "y": 240,
         "wires": [
             [
-                "d4b739558662ebf4",
-                "630edd68e798e5a6"
+                "cae0cfc8f7ddd307",
+                "d37d7b9c4fd85807"
             ]
         ]
     },
     {
-        "id": "5b190e7428ebc184",
+        "id": "f0df4fdaba802dc8",
         "type": "inject",
-        "z": "2c034f53bebacdc3",
-        "g": "d91ec3f9ef9ddfe5",
+        "z": "905c94febbc42e67",
+        "g": "a3c4125c716e9790",
         "name": "Envoy address",
         "props": [
             {
                 "p": "envoyaddress",
-                "v": "<ip-address envoy gateway>",
+                "v": "10.0.40.11",
                 "vt": "str"
             }
         ],
@@ -327,21 +309,19 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 150,
-        "y": 100,
+        "x": 200,
+        "y": 180,
         "wires": [
             [
-                "befd189f76f409d8"
+                "922dce4ef02240e0"
             ]
         ]
     },
     {
-        "id": "63240ef608e6eb52",
+        "id": "7b870980f8b7c8dc",
         "type": "switch",
-        "z": "2c034f53bebacdc3",
-        "g": "d91ec3f9ef9ddfe5",
+        "z": "905c94febbc42e67",
+        "g": "a3c4125c716e9790",
         "name": "HTTP status code=200",
         "property": "statusCode",
         "propertyType": "msg",
@@ -358,15 +338,18 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1150,
-        "y": 100,
+        "x": 1170,
+        "y": 180,
         "wires": [
             [
-                "d349b80d4879b132",
-                "5fde57212a06be6a"
+                "1fcda1179af1491f",
+                "5989ae16fc634c1a",
+                "44a8f04441ec859e",
+                "199bd00a18a19a08",
+                "9bef999ca6abb23e"
             ],
             [
-                "a0fe2400eeb4da41"
+                "fd80c391e7f54c68"
             ]
         ],
         "outputLabels": [
@@ -376,10 +359,10 @@
         "info": "When the envoy accepted the token it returns HTTP status code 200"
     },
     {
-        "id": "630edd68e798e5a6",
+        "id": "d37d7b9c4fd85807",
         "type": "rbe",
-        "z": "2c034f53bebacdc3",
-        "g": "d91ec3f9ef9ddfe5",
+        "z": "905c94febbc42e67",
+        "g": "a3c4125c716e9790",
         "name": "",
         "func": "rbe",
         "gap": "",
@@ -388,19 +371,19 @@
         "septopics": false,
         "property": "payload",
         "topi": "topic",
-        "x": 1590,
-        "y": 160,
+        "x": 1710,
+        "y": 240,
         "wires": [
             [
-                "c484b03a1e7a6503"
+                "c8bfe7163b551225"
             ]
         ]
     },
     {
-        "id": "5fde57212a06be6a",
+        "id": "af2e091e3afe2a62",
         "type": "rbe",
-        "z": "2c034f53bebacdc3",
-        "g": "d91ec3f9ef9ddfe5",
+        "z": "905c94febbc42e67",
+        "g": "a3c4125c716e9790",
         "name": "",
         "func": "rbe",
         "gap": "",
@@ -409,19 +392,40 @@
         "septopics": false,
         "property": "payload",
         "topi": "topic",
-        "x": 1370,
-        "y": 100,
+        "x": 1910,
+        "y": 300,
         "wires": [
             [
-                "2e3303085661a5c5"
+                "5a872cdec8eb0607"
             ]
         ]
     },
     {
-        "id": "d4b739558662ebf4",
+        "id": "5989ae16fc634c1a",
+        "type": "rbe",
+        "z": "905c94febbc42e67",
+        "g": "a3c4125c716e9790",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1490,
+        "y": 180,
+        "wires": [
+            [
+                "1cdae3f8ed4ca9aa"
+            ]
+        ]
+    },
+    {
+        "id": "cae0cfc8f7ddd307",
         "type": "http request",
-        "z": "2c034f53bebacdc3",
-        "g": "d91ec3f9ef9ddfe5",
+        "z": "905c94febbc42e67",
+        "g": "a3c4125c716e9790",
         "name": "api/v1/production",
         "method": "GET",
         "ret": "obj",
@@ -434,21 +438,21 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 1630,
-        "y": 220,
+        "x": 1750,
+        "y": 300,
         "wires": [
             [
-                "97c7f5f4cbb6d860"
+                "af2e091e3afe2a62"
             ]
         ]
     },
     {
-        "id": "2e3303085661a5c5",
+        "id": "1cdae3f8ed4ca9aa",
         "type": "debug",
-        "z": "2c034f53bebacdc3",
-        "g": "d91ec3f9ef9ddfe5",
+        "z": "905c94febbc42e67",
+        "g": "a3c4125c716e9790",
         "name": "debug 1",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -456,38 +460,38 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1960,
-        "y": 100,
+        "x": 1680,
+        "y": 180,
         "wires": []
     },
     {
-        "id": "befd189f76f409d8",
+        "id": "922dce4ef02240e0",
         "type": "time-switch",
-        "z": "2c034f53bebacdc3",
-        "g": "d91ec3f9ef9ddfe5",
+        "z": "905c94febbc42e67",
+        "g": "a3c4125c716e9790",
         "name": "",
-        "lat": "40.71398",
-        "lon": "-32.87107",
+        "lat": "0",
+        "lon": "0",
         "startTime": "sunrise",
-        "endTime": "sunset",
+        "endTime": "dusk",
         "startOffset": "",
         "endOffset": "",
-        "x": 320,
-        "y": 100,
+        "x": 380,
+        "y": 180,
         "wires": [
             [
-                "e0478f3a4d0f4032"
+                "f37df996be12fd81"
             ],
             []
         ]
     },
     {
-        "id": "c484b03a1e7a6503",
+        "id": "c8bfe7163b551225",
         "type": "debug",
-        "z": "2c034f53bebacdc3",
-        "g": "d91ec3f9ef9ddfe5",
+        "z": "905c94febbc42e67",
+        "g": "a3c4125c716e9790",
         "name": "debug 2",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -495,17 +499,17 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1960,
-        "y": 160,
+        "x": 1880,
+        "y": 240,
         "wires": []
     },
     {
-        "id": "a270875faac582c7",
+        "id": "5a872cdec8eb0607",
         "type": "debug",
-        "z": "2c034f53bebacdc3",
-        "g": "d91ec3f9ef9ddfe5",
+        "z": "905c94febbc42e67",
+        "g": "a3c4125c716e9790",
         "name": "debug 3",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -513,58 +517,388 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1960,
-        "y": 220,
+        "x": 2060,
+        "y": 300,
         "wires": []
     },
     {
-        "id": "6f70138720deffab",
+        "id": "cafe254503f4f0be",
+        "type": "comment",
+        "z": "905c94febbc42e67",
+        "g": "a3c4125c716e9790",
+        "name": "Source2",
+        "info": "https://support.enphase.com/s/question/0D53m00008ketz6CAA/i-have-a-new-enphase-system-and-reading-my-envoy-using-the-local-api-this-goes-well-for-one-endpoint-but-not-for-another?t=1678709630042\n\nBased on post:\nKneib_3226\nEdited February 24, 2023 at 10:35 AM",
+        "x": 320,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "a0b6773bcabe207e",
+        "type": "comment",
+        "z": "905c94febbc42e67",
+        "g": "a3c4125c716e9790",
+        "name": "Source1",
+        "info": "https://github.com/H4nsie/EnphaseEnvoy/blob/main/plugin.py",
+        "x": 180,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "407ca72d01d6daed",
+        "type": "comment",
+        "z": "905c94febbc42e67",
+        "g": "a3c4125c716e9790",
+        "name": "Source3",
+        "info": "https://enphase.com/download/iq-gateway-local-apis-or-ui-access-using-token",
+        "x": 460,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "f37df996be12fd81",
+        "type": "change",
+        "z": "905c94febbc42e67",
+        "g": "a3c4125c716e9790",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "cookies",
+                "pt": "msg",
+                "to": "{\"sessionId\": ($exists($flowContext('sessionId')) ? $flowContext('sessionId') : 0)}\t",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "rejectUnauthorized",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 180,
+        "wires": [
+            [
+                "73abf76df46db5f0"
+            ]
+        ]
+    },
+    {
+        "id": "73abf76df46db5f0",
         "type": "http request",
-        "z": "2c034f53bebacdc3",
-        "g": "f1e165a64063194d",
-        "name": "info.xml",
+        "z": "905c94febbc42e67",
+        "g": "a3c4125c716e9790",
+        "name": "api/v1/production/inverters",
         "method": "GET",
-        "ret": "txt",
+        "ret": "obj",
         "paytoqs": "ignore",
-        "url": "https://{{{envoyaddress}}}/info.xml",
+        "url": "https://{{{envoyaddress}}}/api/v1/production/inverters",
         "tls": "",
         "persist": false,
         "proxy": "",
         "insecureHTTPParser": false,
         "authType": "",
         "senderr": false,
-        "headers": [],
-        "credentials": {},
-        "x": 400,
-        "y": 620,
+        "headers": [
+            {
+                "keyType": "Accept",
+                "keyValue": "",
+                "valueType": "application/json",
+                "valueValue": ""
+            },
+            {
+                "keyType": "Content-Type",
+                "keyValue": "",
+                "valueType": "other",
+                "valueValue": "application/x-www-form-urlencoded"
+            },
+            {
+                "keyType": "Cache-Control",
+                "keyValue": "",
+                "valueType": "no-cache",
+                "valueValue": ""
+            }
+        ],
+        "x": 900,
+        "y": 180,
         "wires": [
             [
-                "6c7935ea8c7c423f"
+                "7b870980f8b7c8dc"
             ]
         ]
     },
     {
-        "id": "a55d1a89aa620bf5",
+        "id": "44a8f04441ec859e",
+        "type": "http request",
+        "z": "905c94febbc42e67",
+        "g": "a3c4125c716e9790",
+        "name": "ivp/pdm/energy",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://{{{envoyaddress}}}/ivp/pdm/energy",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "Accept",
+                "keyValue": "",
+                "valueType": "application/json",
+                "valueValue": ""
+            },
+            {
+                "keyType": "Content-Type",
+                "keyValue": "",
+                "valueType": "other",
+                "valueValue": "application/x-www-form-urlencoded"
+            },
+            {
+                "keyType": "Cache-Control",
+                "keyValue": "",
+                "valueType": "no-cache",
+                "valueValue": ""
+            }
+        ],
+        "x": 1520,
+        "y": 120,
+        "wires": [
+            [
+                "ecf4fd1c520bb3ad"
+            ]
+        ]
+    },
+    {
+        "id": "ecf4fd1c520bb3ad",
+        "type": "debug",
+        "z": "905c94febbc42e67",
+        "g": "a3c4125c716e9790",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1800,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "199bd00a18a19a08",
+        "type": "http request",
+        "z": "905c94febbc42e67",
+        "g": "a3c4125c716e9790",
+        "name": "ivp/meters",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://{{{envoyaddress}}}/ivp/meters",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "Accept",
+                "keyValue": "",
+                "valueType": "application/json",
+                "valueValue": ""
+            },
+            {
+                "keyType": "Content-Type",
+                "keyValue": "",
+                "valueType": "other",
+                "valueValue": "application/x-www-form-urlencoded"
+            },
+            {
+                "keyType": "Cache-Control",
+                "keyValue": "",
+                "valueType": "no-cache",
+                "valueValue": ""
+            }
+        ],
+        "x": 1510,
+        "y": 80,
+        "wires": [
+            [
+                "d55e19078ed82bb4"
+            ]
+        ]
+    },
+    {
+        "id": "9bef999ca6abb23e",
+        "type": "http request",
+        "z": "905c94febbc42e67",
+        "g": "a3c4125c716e9790",
+        "name": "ivp/ensemble/device_list",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://{{{envoyaddress}}}/ivp/ensemble/device_list",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "Accept",
+                "keyValue": "",
+                "valueType": "application/json",
+                "valueValue": ""
+            },
+            {
+                "keyType": "Content-Type",
+                "keyValue": "",
+                "valueType": "other",
+                "valueValue": "application/x-www-form-urlencoded"
+            },
+            {
+                "keyType": "Cache-Control",
+                "keyValue": "",
+                "valueType": "no-cache",
+                "valueValue": ""
+            }
+        ],
+        "x": 1550,
+        "y": 40,
+        "wires": [
+            [
+                "fd9d0b5a2b3402a4"
+            ]
+        ]
+    },
+    {
+        "id": "d55e19078ed82bb4",
+        "type": "debug",
+        "z": "905c94febbc42e67",
+        "g": "a3c4125c716e9790",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1800,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "fd9d0b5a2b3402a4",
+        "type": "debug",
+        "z": "905c94febbc42e67",
+        "g": "a3c4125c716e9790",
+        "name": "debug 20",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1800,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "7c8b8c70988ddeb8",
+        "type": "group",
+        "z": "905c94febbc42e67",
+        "g": "351f3381df38c0f3",
+        "name": "Request token from Enphase",
+        "style": {
+            "fill": "#ffbfbf",
+            "label": true
+        },
+        "nodes": [
+            "9f5ff7700feba3cd",
+            "6f29d66f817f3d6e",
+            "f80868eaf5ebcb76",
+            "d10aa11f3d3e155d",
+            "3033800ac69bae40",
+            "78c4f8109cbfa79b",
+            "f22473191ddb8677",
+            "5ebd101aa0d8873d",
+            "07587899caea0de0",
+            "1299883c8afe38ce",
+            "6795b049999a601e",
+            "527035168cdbc80c",
+            "47b278962c46db9a",
+            "5bb0e47b3448324c",
+            "e35bb79b1a6ad68b",
+            "cdea3e93e910c319",
+            "9d5f2dfdc8978f91",
+            "9a9fb3fcee95bd93",
+            "fb3df888c89ed460"
+        ],
+        "x": 74,
+        "y": 559,
+        "w": 2972,
+        "h": 282
+    },
+    {
+        "id": "9f5ff7700feba3cd",
+        "type": "http request",
+        "z": "905c94febbc42e67",
+        "g": "7c8b8c70988ddeb8",
+        "name": "info.xml",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://{{{envoyaddress}}}/info.xml",
+        "tls": "f03098b9a0460f11",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 440,
+        "y": 700,
+        "wires": [
+            [
+                "f80868eaf5ebcb76"
+            ]
+        ]
+    },
+    {
+        "id": "6f29d66f817f3d6e",
         "type": "xml",
-        "z": "2c034f53bebacdc3",
-        "g": "f1e165a64063194d",
+        "z": "905c94febbc42e67",
+        "g": "7c8b8c70988ddeb8",
         "name": "",
         "property": "payload",
         "attr": "",
         "chr": "",
-        "x": 770,
-        "y": 620,
+        "x": 810,
+        "y": 700,
         "wires": [
             [
-                "5858b55198c00bd2"
+                "462bf780289695fc"
             ]
         ]
     },
     {
-        "id": "6c7935ea8c7c423f",
+        "id": "f80868eaf5ebcb76",
         "type": "switch",
-        "z": "2c034f53bebacdc3",
-        "g": "f1e165a64063194d",
+        "z": "905c94febbc42e67",
+        "g": "7c8b8c70988ddeb8",
         "name": "HTTP status code=200",
         "property": "statusCode",
         "propertyType": "msg",
@@ -581,13 +915,15 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 590,
-        "y": 620,
+        "x": 630,
+        "y": 700,
         "wires": [
             [
-                "a55d1a89aa620bf5"
+                "6f29d66f817f3d6e"
             ],
-            []
+            [
+                "9d5f2dfdc8978f91"
+            ]
         ],
         "outputLabels": [
             "success",
@@ -596,134 +932,124 @@
         "info": "When the envoy accepted the token it returns HTTP status code 200"
     },
     {
-        "id": "e708522a541c5e45",
-        "type": "function",
-        "z": "2c034f53bebacdc3",
-        "g": "f1e165a64063194d",
-        "name": "set msg.serialnumber",
-        "func": "msg.serialnumber=msg.payload.envoy_info.device[0].sn[0];\nmsg.headers={\n    \"Accept\": \"application/json\",\n    \"content-type\": \"application/x-www-form-urlencoded\",\n    \"Cache-Control\": \"no-cache\"\n};\nmsg.payload={\n    \"user[email]\": msg.username,\n    \"user[password]\": msg.password\n}\n\n//remove property password\ndelete msg.password;\nmsg.rejectUnauthorized=true;\n\n// Set node status to show date time last called into action\nlet d=new Date();\nnode.status({text:d.toISOString().split('T')[0]+\" \"+d.toTimeString().split(\" \")[0]});\n\n//Continu flow\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1180,
-        "y": 620,
-        "wires": [
-            [
-                "b2180be487beb9ee"
-            ]
-        ]
-    },
-    {
-        "id": "b2180be487beb9ee",
+        "id": "d10aa11f3d3e155d",
         "type": "http request",
-        "z": "2c034f53bebacdc3",
-        "g": "f1e165a64063194d",
+        "z": "905c94febbc42e67",
+        "g": "7c8b8c70988ddeb8",
         "name": "enlighten.enphaseenergy.com/login/login.json",
         "method": "POST",
         "ret": "obj",
         "paytoqs": "ignore",
         "url": "https://enlighten.enphaseenergy.com/login/login.json",
-        "tls": "",
+        "tls": "f03098b9a0460f11",
         "persist": false,
         "proxy": "",
         "insecureHTTPParser": false,
         "authType": "",
         "senderr": false,
-        "headers": [],
-        "x": 1480,
-        "y": 620,
+        "headers": [
+            {
+                "keyType": "User-Agent",
+                "keyValue": "",
+                "valueType": "Mozilla/5.0",
+                "valueValue": ""
+            },
+            {
+                "keyType": "Accept",
+                "keyValue": "",
+                "valueType": "application/json",
+                "valueValue": ""
+            },
+            {
+                "keyType": "Cache-Control",
+                "keyValue": "",
+                "valueType": "no-cache",
+                "valueValue": ""
+            },
+            {
+                "keyType": "Content-Type",
+                "keyValue": "",
+                "valueType": "other",
+                "valueValue": "application/x-www-form-urlencoded"
+            }
+        ],
+        "x": 1520,
+        "y": 700,
         "wires": [
             [
-                "1db42e338f7f9bfc"
+                "f22473191ddb8677"
             ]
         ]
     },
     {
-        "id": "4ef08743f4f189b1",
-        "type": "function",
-        "z": "2c034f53bebacdc3",
-        "g": "f1e165a64063194d",
-        "name": "set payload",
-        "func": "msg.payload={\n    session_id: msg.payload.session_id,\n    serial_num: msg.serialnumber,\n    username: msg.username\n}\ndelete msg.username;\n\n// Set node status to show date time last called into action\nlet d=new Date();\nnode.status({text:d.toISOString().split('T')[0]+\" \"+d.toTimeString().split(\" \")[0]});\n\n//continu flow\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1990,
-        "y": 620,
-        "wires": [
-            [
-                "c8f489b39cc71df8"
-            ]
-        ]
-    },
-    {
-        "id": "c8f489b39cc71df8",
+        "id": "3033800ac69bae40",
         "type": "http request",
-        "z": "2c034f53bebacdc3",
-        "g": "f1e165a64063194d",
+        "z": "905c94febbc42e67",
+        "g": "7c8b8c70988ddeb8",
         "name": "entrez.enphaseenergy.com/tokens",
         "method": "POST",
         "ret": "txt",
         "paytoqs": "ignore",
         "url": "https://entrez.enphaseenergy.com/tokens",
-        "tls": "",
+        "tls": "f03098b9a0460f11",
         "persist": false,
         "proxy": "",
         "insecureHTTPParser": false,
         "authType": "",
         "senderr": false,
-        "headers": [],
-        "x": 2220,
-        "y": 620,
+        "headers": [
+            {
+                "keyType": "User-Agent",
+                "keyValue": "",
+                "valueType": "Mozilla/5.0",
+                "valueValue": ""
+            }
+        ],
+        "x": 2320,
+        "y": 700,
         "wires": [
             [
-                "d75f803306cc0c44"
+                "5ebd101aa0d8873d"
             ]
         ]
     },
     {
-        "id": "b869eea4bbf8ee80",
-        "type": "function",
-        "z": "2c034f53bebacdc3",
-        "g": "f1e165a64063194d",
-        "name": "Save token",
-        "func": "flow.set('Enphase_local_token',msg.payload);\nmsg.token=msg.payload;\nmsg.rejectUnauthorized=false;\n\n// Set node status to show date time last called into action\nlet d=new Date();\nnode.status({text:d.toISOString().split('T')[0]+\" \"+d.toTimeString().split(\" \")[0]});\n\n//Continu flow\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 2690,
-        "y": 620,
-        "wires": [
-            [
-                "a0fe2400eeb4da41"
-            ]
-        ]
+        "id": "78c4f8109cbfa79b",
+        "type": "group",
+        "z": "905c94febbc42e67",
+        "g": "7c8b8c70988ddeb8",
+        "name": "",
+        "style": {
+            "fill": "#ffff00",
+            "label": true
+        },
+        "nodes": [
+            "462bf780289695fc"
+        ],
+        "x": 874,
+        "y": 659,
+        "w": 232,
+        "h": 82
     },
     {
-        "id": "5858b55198c00bd2",
+        "id": "462bf780289695fc",
         "type": "change",
-        "z": "2c034f53bebacdc3",
-        "g": "5370b06948799521",
+        "z": "905c94febbc42e67",
+        "g": "78c4f8109cbfa79b",
         "name": "Login credentials",
         "rules": [
             {
                 "t": "set",
                 "p": "username",
                 "pt": "msg",
-                "to": "<username>",
+                "to": "greennl@m.hesselink.eu",
                 "tot": "str"
             },
             {
                 "t": "set",
                 "p": "password",
                 "pt": "msg",
-                "to": "<password>",
+                "to": "4@N3LCBXFst5gihT",
                 "tot": "str"
             }
         ],
@@ -732,19 +1058,19 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 950,
-        "y": 620,
+        "x": 990,
+        "y": 700,
         "wires": [
             [
-                "e708522a541c5e45"
+                "47b278962c46db9a"
             ]
         ]
     },
     {
-        "id": "1db42e338f7f9bfc",
+        "id": "f22473191ddb8677",
         "type": "switch",
-        "z": "2c034f53bebacdc3",
-        "g": "f1e165a64063194d",
+        "z": "905c94febbc42e67",
+        "g": "7c8b8c70988ddeb8",
         "name": "HTTP status code=200",
         "property": "statusCode",
         "propertyType": "msg",
@@ -761,13 +1087,15 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1790,
-        "y": 620,
+        "x": 1830,
+        "y": 700,
         "wires": [
             [
-                "4ef08743f4f189b1"
+                "527035168cdbc80c"
             ],
-            []
+            [
+                "9a9fb3fcee95bd93"
+            ]
         ],
         "outputLabels": [
             "success",
@@ -776,10 +1104,10 @@
         "info": "When the envoy accepted the token it returns HTTP status code 200"
     },
     {
-        "id": "d75f803306cc0c44",
+        "id": "5ebd101aa0d8873d",
         "type": "switch",
-        "z": "2c034f53bebacdc3",
-        "g": "f1e165a64063194d",
+        "z": "905c94febbc42e67",
+        "g": "7c8b8c70988ddeb8",
         "name": "HTTP status code=200",
         "property": "statusCode",
         "propertyType": "msg",
@@ -796,13 +1124,15 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 2490,
-        "y": 620,
+        "x": 2590,
+        "y": 700,
         "wires": [
             [
-                "b869eea4bbf8ee80"
+                "6795b049999a601e"
             ],
-            []
+            [
+                "fb3df888c89ed460"
+            ]
         ],
         "outputLabels": [
             "success",
@@ -811,65 +1141,342 @@
         "info": "When the envoy accepted the token it returns HTTP status code 200"
     },
     {
-        "id": "1fb052854fb2f77f",
+        "id": "07587899caea0de0",
         "type": "function",
-        "z": "2c034f53bebacdc3",
-        "g": "f1e165a64063194d",
-        "name": "Limit request rate to once a day",
-        "func": "var interval = (1000*60*60*24); // minimum interval between messages (ms)\nvar lastReleased = context.get('LastTime') || 0;\nvar now = Date.now();\n\nif (now-lastReleased > interval) {\n  context.set('LastTime',now);\n  return msg;\n} else {\n  return null;\n}",
+        "z": "905c94febbc42e67",
+        "g": "7c8b8c70988ddeb8",
+        "name": "Limit request rate to twice a day",
+        "func": "var interval = (1000*60*60*12); // minimum interval between messages (ms)\nvar lastReleased = context.get('LastTime') || 0;\nvar now = Date.now();\n\n// Set node status to show date time last called into action\nlet d=new Date();\nnode.status({text:d.toISOString().split('T')[0]+\" \"+d.toTimeString().split(\" \")[0]});\n\nif (now-lastReleased > interval) {\n  context.set('LastTime',now);\n  return msg;\n} else {\n  return null;\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 190,
-        "y": 620,
+        "x": 230,
+        "y": 700,
         "wires": [
             [
-                "6f70138720deffab"
+                "9f5ff7700feba3cd"
             ]
         ],
         "info": "https://flows.nodered.org/flow/9410e4cebcc4b68fae73"
     },
     {
-        "id": "97c7f5f4cbb6d860",
-        "type": "rbe",
-        "z": "2c034f53bebacdc3",
-        "g": "d91ec3f9ef9ddfe5",
+        "id": "1299883c8afe38ce",
+        "type": "junction",
+        "z": "905c94febbc42e67",
+        "g": "7c8b8c70988ddeb8",
+        "x": 100,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6795b049999a601e",
+        "type": "change",
+        "z": "905c94febbc42e67",
+        "g": "7c8b8c70988ddeb8",
         "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": false,
-        "property": "payload",
-        "topi": "topic",
-        "x": 1790,
-        "y": 220,
+        "rules": [
+            {
+                "t": "set",
+                "p": "Enphase_local_token",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2890,
+        "y": 700,
         "wires": [
             [
-                "a270875faac582c7"
+                "fd80c391e7f54c68"
             ]
         ]
     },
     {
-        "id": "e6027a3ff14620c1",
+        "id": "527035168cdbc80c",
+        "type": "change",
+        "z": "905c94febbc42e67",
+        "g": "7c8b8c70988ddeb8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t    \"session_id\": msg.payload.session_id,\t    \"serial_num\": msg.serialnumber,\t    \"username\": msg.username\t}",
+                "tot": "jsonata"
+            },
+            {
+                "t": "delete",
+                "p": "username",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2060,
+        "y": 700,
+        "wires": [
+            [
+                "3033800ac69bae40"
+            ]
+        ]
+    },
+    {
+        "id": "47b278962c46db9a",
+        "type": "change",
+        "z": "905c94febbc42e67",
+        "g": "7c8b8c70988ddeb8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "serialnumber",
+                "pt": "msg",
+                "to": "payload.envoy_info.device[0].sn[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t    \"user[email]\": msg.username,\t    \"user[password]\": msg.password\t}",
+                "tot": "jsonata"
+            },
+            {
+                "t": "delete",
+                "p": "password",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1220,
+        "y": 700,
+        "wires": [
+            [
+                "d10aa11f3d3e155d"
+            ]
+        ]
+    },
+    {
+        "id": "5bb0e47b3448324c",
         "type": "comment",
-        "z": "2c034f53bebacdc3",
-        "name": "Source 1",
-        "info": "https://github.com/H4nsie/EnphaseEnvoy/blob/main/plugin.py",
-        "x": 100,
-        "y": 20,
+        "z": "905c94febbc42e67",
+        "g": "7c8b8c70988ddeb8",
+        "name": "Login to Envoy has failed. Request new token from Enphase",
+        "info": "",
+        "x": 340,
+        "y": 600,
         "wires": []
     },
     {
-        "id": "14f187cf4065078c",
+        "id": "e35bb79b1a6ad68b",
+        "type": "inject",
+        "z": "905c94febbc42e67",
+        "g": "7c8b8c70988ddeb8",
+        "name": "Envoy address ",
+        "props": [
+            {
+                "p": "envoyaddress",
+                "v": "10.0.40.11",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "00 04 * * *",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 200,
+        "y": 760,
+        "wires": [
+            [
+                "9f5ff7700feba3cd"
+            ]
+        ],
+        "info": "Daily new token request"
+    },
+    {
+        "id": "cdea3e93e910c319",
         "type": "comment",
-        "z": "2c034f53bebacdc3",
-        "name": "Source 2",
-        "info": "https://support.enphase.com/s/question/0D53m00008ketz6CAA/i-have-a-new-enphase-system-and-reading-my-envoy-using-the-local-api-this-goes-well-for-one-endpoint-but-not-for-another?t=1678709630042\n\nBased on post:\nKneib_3226\nEdited February 24, 2023 at 10:35 AM",
+        "z": "905c94febbc42e67",
+        "g": "7c8b8c70988ddeb8",
+        "name": "Daily request for new Token",
+        "info": "By requesting a new token on a daily basis the system will remain working for 1 year after problems/changes at Enphase.",
         "x": 240,
-        "y": 20,
+        "y": 800,
         "wires": []
+    },
+    {
+        "id": "9d5f2dfdc8978f91",
+        "type": "debug",
+        "z": "905c94febbc42e67",
+        "g": "7c8b8c70988ddeb8",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "9a9fb3fcee95bd93",
+        "type": "debug",
+        "z": "905c94febbc42e67",
+        "g": "7c8b8c70988ddeb8",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2040,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "fb3df888c89ed460",
+        "type": "debug",
+        "z": "905c94febbc42e67",
+        "g": "7c8b8c70988ddeb8",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2860,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "a78351c804ce78a7",
+        "type": "group",
+        "z": "905c94febbc42e67",
+        "name": "Decode JWT token",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "97f390218231909c",
+            "3b7064972c981e0d",
+            "cbc5aacfe7c31bb6",
+            "7044fad7b810abcd"
+        ],
+        "x": 54,
+        "y": 899,
+        "w": 532,
+        "h": 142
+    },
+    {
+        "id": "97f390218231909c",
+        "type": "inject",
+        "z": "905c94febbc42e67",
+        "g": "a78351c804ce78a7",
+        "name": "Start",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 1000,
+        "wires": [
+            [
+                "3b7064972c981e0d"
+            ]
+        ]
+    },
+    {
+        "id": "3b7064972c981e0d",
+        "type": "function",
+        "z": "905c94febbc42e67",
+        "g": "a78351c804ce78a7",
+        "name": "JWT Decoder",
+        "func": "const token=flow.get('Enphase_local_token');\n    const payload = token.split('.')[1];\n    const decodedPayload = JSON.parse(Buffer.from(payload, 'base64').toString());\n    msg.payload = {\n        serialNumber: decodedPayload.aud,\n        issuer: decodedPayload.iss,\n        userType: decodedPayload.enphaseUser,\n        expirationDate: new Date(decodedPayload.exp * 1000).toLocaleString(),\n        createdAt: new Date(decodedPayload.iat * 1000).toLocaleString(),\n        jti: decodedPayload.jti,\n        username: decodedPayload.username\n    };\n    return msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 1000,
+        "wires": [
+            [
+                "cbc5aacfe7c31bb6"
+            ]
+        ]
+    },
+    {
+        "id": "cbc5aacfe7c31bb6",
+        "type": "debug",
+        "z": "905c94febbc42e67",
+        "g": "a78351c804ce78a7",
+        "name": "Result",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "7044fad7b810abcd",
+        "type": "comment",
+        "z": "905c94febbc42e67",
+        "g": "a78351c804ce78a7",
+        "name": "Source",
+        "info": "https://enever.nl/geldigheid-van-een-enphase-access-token-controleren/",
+        "x": 130,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "494e0cba8cbf7c60",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-contrib-time-switch": "1.1.7"
+        }
     }
 ]

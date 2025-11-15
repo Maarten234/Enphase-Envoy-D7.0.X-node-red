@@ -16,8 +16,8 @@
             "a3c4125c716e9790",
             "7c8b8c70988ddeb8"
         ],
-        "x": 48,
-        "y": -47,
+        "x": 96.57142639160156,
+        "y": 174.4285888671875,
         "w": 3024,
         "h": 914
     },
@@ -28,8 +28,8 @@
         "g": "351f3381df38c0f3",
         "name": "Connection to envoy failed. Request new sessionId",
         "info": "",
-        "x": 370,
-        "y": 380,
+        "x": 418.57142639160156,
+        "y": 601.4285888671875,
         "wires": []
     },
     {
@@ -39,8 +39,8 @@
         "g": "351f3381df38c0f3",
         "name": "Feed the received token back",
         "info": "",
-        "x": 1100,
-        "y": 560,
+        "x": 1148.5714263916016,
+        "y": 781.4285888671875,
         "wires": []
     },
     {
@@ -50,8 +50,8 @@
         "g": "351f3381df38c0f3",
         "name": "Feed the received sessionId back",
         "info": "",
-        "x": 810,
-        "y": 380,
+        "x": 858.5714263916016,
+        "y": 601.4285888671875,
         "wires": []
     },
     {
@@ -70,8 +70,8 @@
             "39dc35c82726a8e0",
             "fd80c391e7f54c68"
         ],
-        "x": 74,
-        "y": 419,
+        "x": 122.57142639160156,
+        "y": 640.4285888671875,
         "w": 852,
         "h": 82
     },
@@ -96,8 +96,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 590,
-        "y": 460,
+        "x": 638.5714263916016,
+        "y": 681.4285888671875,
         "wires": [
             [
                 "f804c9c99201b2a3"
@@ -132,8 +132,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 820,
-        "y": 460,
+        "x": 868.5714263916016,
+        "y": 681.4285888671875,
         "wires": [
             [
                 "f37df996be12fd81"
@@ -182,8 +182,8 @@
                 "valueValue": "authorization"
             }
         ],
-        "x": 380,
-        "y": 460,
+        "x": 428.57142639160156,
+        "y": 681.4285888671875,
         "wires": [
             [
                 "2479611c2a0f3150"
@@ -204,8 +204,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 190,
-        "y": 460,
+        "x": 238.57142639160156,
+        "y": 681.4285888671875,
         "wires": [
             [
                 "39dc35c82726a8e0"
@@ -260,8 +260,8 @@
             "d55e19078ed82bb4",
             "fd9d0b5a2b3402a4"
         ],
-        "x": 74,
-        "y": -21,
+        "x": 122.57142639160156,
+        "y": 200.4285888671875,
         "w": 2092,
         "h": 362
     },
@@ -282,8 +282,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 1520,
-        "y": 240,
+        "x": 1568.5714263916016,
+        "y": 461.4285888671875,
         "wires": [
             [
                 "cae0cfc8f7ddd307",
@@ -300,17 +300,17 @@
         "props": [
             {
                 "p": "envoyaddress",
-                "v": "10.0.40.11",
+                "v": "192.168.xx.yy",
                 "vt": "str"
             }
         ],
         "repeat": "60",
         "crontab": "",
-        "once": true,
+        "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 200,
-        "y": 180,
+        "x": 248.57142639160156,
+        "y": 401.4285888671875,
         "wires": [
             [
                 "922dce4ef02240e0"
@@ -338,8 +338,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1170,
-        "y": 180,
+        "x": 1218.5714263916016,
+        "y": 401.4285888671875,
         "wires": [
             [
                 "1fcda1179af1491f",
@@ -371,8 +371,8 @@
         "septopics": false,
         "property": "payload",
         "topi": "topic",
-        "x": 1710,
-        "y": 240,
+        "x": 1758.5714263916016,
+        "y": 461.4285888671875,
         "wires": [
             [
                 "c8bfe7163b551225"
@@ -392,8 +392,8 @@
         "septopics": false,
         "property": "payload",
         "topi": "topic",
-        "x": 1910,
-        "y": 300,
+        "x": 1958.5714263916016,
+        "y": 521.4285888671875,
         "wires": [
             [
                 "5a872cdec8eb0607"
@@ -413,8 +413,8 @@
         "septopics": false,
         "property": "payload",
         "topi": "topic",
-        "x": 1490,
-        "y": 180,
+        "x": 1538.5714263916016,
+        "y": 401.4285888671875,
         "wires": [
             [
                 "1cdae3f8ed4ca9aa"
@@ -438,8 +438,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 1750,
-        "y": 300,
+        "x": 1798.5714263916016,
+        "y": 521.4285888671875,
         "wires": [
             [
                 "af2e091e3afe2a62"
@@ -460,8 +460,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1680,
-        "y": 180,
+        "x": 1728.5714263916016,
+        "y": 401.4285888671875,
         "wires": []
     },
     {
@@ -476,8 +476,8 @@
         "endTime": "dusk",
         "startOffset": "",
         "endOffset": "",
-        "x": 380,
-        "y": 180,
+        "x": 428.57142639160156,
+        "y": 401.4285888671875,
         "wires": [
             [
                 "f37df996be12fd81"
@@ -499,8 +499,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1880,
-        "y": 240,
+        "x": 1928.5714263916016,
+        "y": 461.4285888671875,
         "wires": []
     },
     {
@@ -517,8 +517,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2060,
-        "y": 300,
+        "x": 2108.5714263916016,
+        "y": 521.4285888671875,
         "wires": []
     },
     {
@@ -528,8 +528,8 @@
         "g": "a3c4125c716e9790",
         "name": "Source2",
         "info": "https://support.enphase.com/s/question/0D53m00008ketz6CAA/i-have-a-new-enphase-system-and-reading-my-envoy-using-the-local-api-this-goes-well-for-one-endpoint-but-not-for-another?t=1678709630042\n\nBased on post:\nKneib_3226\nEdited February 24, 2023 at 10:35 AM",
-        "x": 320,
-        "y": 100,
+        "x": 368.57142639160156,
+        "y": 321.4285888671875,
         "wires": []
     },
     {
@@ -539,8 +539,8 @@
         "g": "a3c4125c716e9790",
         "name": "Source1",
         "info": "https://github.com/H4nsie/EnphaseEnvoy/blob/main/plugin.py",
-        "x": 180,
-        "y": 100,
+        "x": 228.57142639160156,
+        "y": 321.4285888671875,
         "wires": []
     },
     {
@@ -550,8 +550,8 @@
         "g": "a3c4125c716e9790",
         "name": "Source3",
         "info": "https://enphase.com/download/iq-gateway-local-apis-or-ui-access-using-token",
-        "x": 460,
-        "y": 100,
+        "x": 508.57142639160156,
+        "y": 321.4285888671875,
         "wires": []
     },
     {
@@ -581,8 +581,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 640,
-        "y": 180,
+        "x": 688.5714263916016,
+        "y": 401.4285888671875,
         "wires": [
             [
                 "73abf76df46db5f0"
@@ -625,8 +625,8 @@
                 "valueValue": ""
             }
         ],
-        "x": 900,
-        "y": 180,
+        "x": 948.5714263916016,
+        "y": 401.4285888671875,
         "wires": [
             [
                 "7b870980f8b7c8dc"
@@ -669,8 +669,8 @@
                 "valueValue": ""
             }
         ],
-        "x": 1520,
-        "y": 120,
+        "x": 1568.5714263916016,
+        "y": 341.4285888671875,
         "wires": [
             [
                 "ecf4fd1c520bb3ad"
@@ -682,16 +682,17 @@
         "type": "debug",
         "z": "905c94febbc42e67",
         "g": "a3c4125c716e9790",
-        "name": "debug 14",
-        "active": true,
+        "name": "debug 9",
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1800,
-        "y": 100,
+        "x": 1848.5714263916016,
+        "y": 321.4285888671875,
         "wires": []
     },
     {
@@ -730,8 +731,8 @@
                 "valueValue": ""
             }
         ],
-        "x": 1510,
-        "y": 80,
+        "x": 1558.5714263916016,
+        "y": 301.4285888671875,
         "wires": [
             [
                 "d55e19078ed82bb4"
@@ -774,8 +775,8 @@
                 "valueValue": ""
             }
         ],
-        "x": 1550,
-        "y": 40,
+        "x": 1598.5714263916016,
+        "y": 261.4285888671875,
         "wires": [
             [
                 "fd9d0b5a2b3402a4"
@@ -787,16 +788,17 @@
         "type": "debug",
         "z": "905c94febbc42e67",
         "g": "a3c4125c716e9790",
-        "name": "debug 15",
-        "active": true,
+        "name": "debug 8",
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1800,
-        "y": 60,
+        "x": 1848.5714263916016,
+        "y": 281.4285888671875,
         "wires": []
     },
     {
@@ -804,16 +806,17 @@
         "type": "debug",
         "z": "905c94febbc42e67",
         "g": "a3c4125c716e9790",
-        "name": "debug 20",
-        "active": true,
+        "name": "debug 7",
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1800,
-        "y": 20,
+        "x": 1848.5714263916016,
+        "y": 241.4285888671875,
         "wires": []
     },
     {
@@ -847,8 +850,8 @@
             "9a9fb3fcee95bd93",
             "fb3df888c89ed460"
         ],
-        "x": 74,
-        "y": 559,
+        "x": 122.57142639160156,
+        "y": 780.4285888671875,
         "w": 2972,
         "h": 282
     },
@@ -869,8 +872,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 440,
-        "y": 700,
+        "x": 488.57142639160156,
+        "y": 921.4285888671875,
         "wires": [
             [
                 "f80868eaf5ebcb76"
@@ -886,8 +889,8 @@
         "property": "payload",
         "attr": "",
         "chr": "",
-        "x": 810,
-        "y": 700,
+        "x": 858.5714263916016,
+        "y": 921.4285888671875,
         "wires": [
             [
                 "462bf780289695fc"
@@ -915,8 +918,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 630,
-        "y": 700,
+        "x": 678.5714263916016,
+        "y": 921.4285888671875,
         "wires": [
             [
                 "6f29d66f817f3d6e"
@@ -973,8 +976,8 @@
                 "valueValue": "application/x-www-form-urlencoded"
             }
         ],
-        "x": 1520,
-        "y": 700,
+        "x": 1568.5714263916016,
+        "y": 921.4285888671875,
         "wires": [
             [
                 "f22473191ddb8677"
@@ -1005,8 +1008,8 @@
                 "valueValue": ""
             }
         ],
-        "x": 2320,
-        "y": 700,
+        "x": 2368.5714263916016,
+        "y": 921.4285888671875,
         "wires": [
             [
                 "5ebd101aa0d8873d"
@@ -1026,8 +1029,8 @@
         "nodes": [
             "462bf780289695fc"
         ],
-        "x": 874,
-        "y": 659,
+        "x": 922.5714263916016,
+        "y": 880.4285888671875,
         "w": 232,
         "h": 82
     },
@@ -1042,14 +1045,14 @@
                 "t": "set",
                 "p": "username",
                 "pt": "msg",
-                "to": "greennl@m.hesselink.eu",
+                "to": "john.doe@example.com",
                 "tot": "str"
             },
             {
                 "t": "set",
                 "p": "password",
                 "pt": "msg",
-                "to": "4@N3LCBXFst5gihT",
+                "to": "VeryStrongPassword",
                 "tot": "str"
             }
         ],
@@ -1058,8 +1061,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 990,
-        "y": 700,
+        "x": 1038.5714263916016,
+        "y": 921.4285888671875,
         "wires": [
             [
                 "47b278962c46db9a"
@@ -1087,8 +1090,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1830,
-        "y": 700,
+        "x": 1878.5714263916016,
+        "y": 921.4285888671875,
         "wires": [
             [
                 "527035168cdbc80c"
@@ -1124,8 +1127,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 2590,
-        "y": 700,
+        "x": 2638.5714263916016,
+        "y": 921.4285888671875,
         "wires": [
             [
                 "6795b049999a601e"
@@ -1152,8 +1155,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 230,
-        "y": 700,
+        "x": 278.57142639160156,
+        "y": 921.4285888671875,
         "wires": [
             [
                 "9f5ff7700feba3cd"
@@ -1166,8 +1169,8 @@
         "type": "junction",
         "z": "905c94febbc42e67",
         "g": "7c8b8c70988ddeb8",
-        "x": 100,
-        "y": 700,
+        "x": 148.57142639160156,
+        "y": 921.4285888671875,
         "wires": [
             []
         ]
@@ -1192,8 +1195,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2890,
-        "y": 700,
+        "x": 2938.5714263916016,
+        "y": 921.4285888671875,
         "wires": [
             [
                 "fd80c391e7f54c68"
@@ -1225,8 +1228,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2060,
-        "y": 700,
+        "x": 2108.5714263916016,
+        "y": 921.4285888671875,
         "wires": [
             [
                 "3033800ac69bae40"
@@ -1265,8 +1268,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1220,
-        "y": 700,
+        "x": 1268.5714263916016,
+        "y": 921.4285888671875,
         "wires": [
             [
                 "d10aa11f3d3e155d"
@@ -1280,8 +1283,8 @@
         "g": "7c8b8c70988ddeb8",
         "name": "Login to Envoy has failed. Request new token from Enphase",
         "info": "",
-        "x": 340,
-        "y": 600,
+        "x": 388.57142639160156,
+        "y": 821.4285888671875,
         "wires": []
     },
     {
@@ -1293,17 +1296,17 @@
         "props": [
             {
                 "p": "envoyaddress",
-                "v": "10.0.40.11",
+                "v": "192.168.xx.yy",
                 "vt": "str"
             }
         ],
         "repeat": "",
         "crontab": "00 04 * * *",
-        "once": true,
+        "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 200,
-        "y": 760,
+        "x": 248.57142639160156,
+        "y": 981.4285888671875,
         "wires": [
             [
                 "9f5ff7700feba3cd"
@@ -1318,8 +1321,8 @@
         "g": "7c8b8c70988ddeb8",
         "name": "Daily request for new Token",
         "info": "By requesting a new token on a daily basis the system will remain working for 1 year after problems/changes at Enphase.",
-        "x": 240,
-        "y": 800,
+        "x": 288.57142639160156,
+        "y": 1021.4285888671875,
         "wires": []
     },
     {
@@ -1336,8 +1339,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 820,
-        "y": 780,
+        "x": 868.5714263916016,
+        "y": 1001.4285888671875,
         "wires": []
     },
     {
@@ -1354,8 +1357,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2040,
-        "y": 780,
+        "x": 2088.5714263916016,
+        "y": 1001.4285888671875,
         "wires": []
     },
     {
@@ -1372,8 +1375,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2860,
-        "y": 780,
+        "x": 2908.5714263916016,
+        "y": 1001.4285888671875,
         "wires": []
     },
     {
@@ -1390,8 +1393,8 @@
             "cbc5aacfe7c31bb6",
             "7044fad7b810abcd"
         ],
-        "x": 54,
-        "y": 899,
+        "x": 94,
+        "y": 1119,
         "w": 532,
         "h": 142
     },
@@ -1413,8 +1416,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 150,
-        "y": 1000,
+        "x": 190,
+        "y": 1220,
         "wires": [
             [
                 "3b7064972c981e0d"
@@ -1434,8 +1437,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 320,
-        "y": 1000,
+        "x": 360,
+        "y": 1220,
         "wires": [
             [
                 "cbc5aacfe7c31bb6"
@@ -1456,8 +1459,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 490,
-        "y": 1000,
+        "x": 530,
+        "y": 1220,
         "wires": []
     },
     {
@@ -1467,12 +1470,12 @@
         "g": "a78351c804ce78a7",
         "name": "Source",
         "info": "https://enever.nl/geldigheid-van-een-enphase-access-token-controleren/",
-        "x": 130,
-        "y": 940,
+        "x": 170,
+        "y": 1160,
         "wires": []
     },
     {
-        "id": "494e0cba8cbf7c60",
+        "id": "2fc8886c5dbd015b",
         "type": "global-config",
         "env": [],
         "modules": {

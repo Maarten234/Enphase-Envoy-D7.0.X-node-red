@@ -430,7 +430,7 @@
         "method": "GET",
         "ret": "obj",
         "paytoqs": "ignore",
-        "url": "http://{{{envoyaddress}}}/api/v1/production",
+        "url": "https://{{{envoyaddress}}}/api/v1/production",
         "tls": "",
         "persist": false,
         "proxy": "",

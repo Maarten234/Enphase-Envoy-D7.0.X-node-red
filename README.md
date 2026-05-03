@@ -12,7 +12,8 @@ To use this flow you've got to adjust the following 4 nodes:
 
 # Flow
 ![flow](./images/flow%20enphase%20envoy.gif)
-![subflow](.images/subflow%20-%20Get%20token%20from%20Enhase.gif)
+# Subflow - Get token from Enphase
+![subflow](./images/subflow%20-%20Get%20token%20from%20Enhase.gif)
 # How does it work
 The flow contains 3 functions sorted as groups.
 1. **<ins>Read envoy data</ins>**(blue group)<br>This group is can be devided into 4 sub functions
